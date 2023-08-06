@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_2_widgets/config/menu/menu_item.dart';
-import 'package:flutter_2_widgets/presentation/screens/screen.dart';
+//import 'package:flutter_2_widgets/presentation/screens/screen.dart';
+import 'package:flutter_2_widgets/presentation/widgets/side_menu.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,12 +10,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldkey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Flutter 2 Widgtes"),
-      ),
-      body: const _HomeView(),
-    );
+        key: scaffoldkey,
+        appBar: AppBar(
+          title: const Text("Flutter 2 Widgtes"),
+        ),
+        body: const _HomeView(),
+        drawer: SideMenu(
+          scaffoldkey: scaffoldkey,
+        ));
   }
 }
 
@@ -51,8 +56,8 @@ class _CustomListTitle extends StatelessWidget {
         color: colors.primary,
       ),
       onTap: () {
-        //context.push(menuItem.link);
-        context.pushNamed(menuItem.name);
+        context.push(menuItem.link);
+        //context.pushNamed(menuItem.name);
       },
     );
   }

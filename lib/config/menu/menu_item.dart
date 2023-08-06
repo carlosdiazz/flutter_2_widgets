@@ -65,4 +65,16 @@ const appMenuItems = <MenuItem>[
       link: "/ui",
       icon: Icons.contact_emergency,
       name: UiControlsScreen.name),
+  MenuItem(
+      title: "Counter",
+      subTitle: "Varios Tarjertas",
+      link: "/counter",
+      icon: Icons.question_answer,
+      name: CounterScreen.name),
+  MenuItem(
+      title: "ThemeChange",
+      subTitle: "Varios Tarjertas",
+      link: "/themechange",
+      icon: Icons.theater_comedy_outlined,
+      name: ThemeChangeScreen.name),
 ];

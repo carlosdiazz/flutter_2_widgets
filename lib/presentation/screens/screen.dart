@@ -1,3 +1,5 @@
+export 'package:flutter_2_widgets/presentation/screens/theme_change_Screen.dart';
+export 'package:flutter_2_widgets/presentation/screens/counter_screen.dart';
 export 'package:flutter_2_widgets/presentation/screens/animated_screen.dart';
 export 'package:flutter_2_widgets/presentation/screens/app_tutorial_screen.dart';
 export 'package:flutter_2_widgets/presentation/screens/infinite_scroll_screen.dart';
